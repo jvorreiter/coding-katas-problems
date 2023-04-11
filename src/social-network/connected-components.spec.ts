@@ -1,5 +1,5 @@
 import { getConnectedComponents } from "./connected-components";
-import { generateGraph } from "./graph";
+import { generateGraph } from "../_shared/graph";
 
 describe('connected components', () => {
     it('should find all connected components correctly', () => {
@@ -21,7 +21,7 @@ describe('connected components', () => {
         // act/when
         const connectedComponents = getConnectedComponents(graph);
 
-        // asset/then
+        // assert/then
         expect(connectedComponents.nodes).toEqual(5);
         expect(connectedComponents.components).toEqual(1);
     });
