@@ -2,7 +2,7 @@ import { getConnectedComponents } from "./connected-components";
 import { generateGraph } from "../_shared/graph";
 
 describe('connected components', () => {
-    it('should find all connected components correctly', () => {
+    it('should find connected components correctly', () => {
         // arrange/given
         /* generates a graph like so:
          *      1
@@ -22,7 +22,8 @@ describe('connected components', () => {
         const connectedComponents = getConnectedComponents(graph);
 
         // assert/then
-        expect(connectedComponents.nodes).toEqual(5);
         expect(connectedComponents.components).toEqual(1);
+        expect(connectedComponents.nodes).toHaveLength(1);
+        expect(connectedComponents.nodes[0]).toEqual(5);
     });
 });

@@ -28,6 +28,16 @@
  * A---B
  * | \ |
  * D---C
+ *
+ * 
+ * Examples:
+ * This supply chain has a cost of 3 (3 nodes, no cycle)
+ * A---B---C
+ * 
+ * This supply chain has a cost of 13 (4 nodes, a supply chain of cost 3²)
+ * A---B
+ *   \ |
+ *     C---D
  * 
  * 
  * Task: 

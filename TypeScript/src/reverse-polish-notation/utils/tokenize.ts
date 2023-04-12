@@ -203,7 +203,7 @@ import { NumberToken, Token } from "../types/Token";
  * Parses a string to a list of tokens.
  * Valid tokens are:
  * - a non-negative integer or decimal number
- * - a binary operator
+ * - a binary operator `+`, `-`, `*`, `/`, `^`
  * - parentheses `()`, `[]`, `{}`, `<>`
  * @param input 
  * @returns 
@@ -253,6 +253,10 @@ function getNumberToken(input: string, i: number): { token: Token; length: numbe
         }
 
         break;
+    }
+
+    if(numberString.endsWith('.')) {
+        throw new Error(`Invalid number token "${numberString}"`);
     }
 
     const token: NumberToken = {

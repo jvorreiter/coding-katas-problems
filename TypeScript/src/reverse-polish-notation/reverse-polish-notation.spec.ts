@@ -51,6 +51,18 @@ describe('reverse polish notation', () => {
         expect(rpnTokens[2].type).toBe('binary-operator');
         expect((rpnTokens[2] as BinaryOperatorToken).operator).toBe('divide');
     });
+    it('should generate correct exponentiation token order', () => {
+        const tokens = tokenize('1^2');
+
+        const rpnTokens = reversePolishNotation(tokens);
+        expect(rpnTokens).toHaveLength(3);
+
+        expect(rpnTokens[0].type).toBe('number');
+        expect(rpnTokens[1].type).toBe('number');
+
+        expect(rpnTokens[2].type).toBe('binary-operator');
+        expect((rpnTokens[2] as BinaryOperatorToken).operator).toBe('exponentiate');
+    });
     it('should correctly remove parentheses', () => {
         const tokens = tokenize('(1)');
 

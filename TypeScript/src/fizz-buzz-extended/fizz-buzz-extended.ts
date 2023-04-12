@@ -20,32 +20,32 @@
  * Bonus task: Make the numbers and strings for the rules above configurable.
  */
 
-export function fizzBuzzExtended(from: number, to: number): string[] {
-    if(from != to) {
+export function fizzBuzzExtended(fromInclusive: number, toInclusive: number): string[] {
+    if(fromInclusive != toInclusive) {
         const result: string[] = [];
 
-        const fizzBuzzedNumber = from % 3 == 0 ? 'Fizz'
-            : from % 5 == 0 ? 'Buzz'
-            : from % 8 == 0 ? 'Razz'
-            : from.toString().indexOf('3') != -1 ? 'Fuww'
-            : from.toString().indexOf('5') != -1 ? 'Baww'
-            : from.toString().indexOf('8') != -1 ? 'Riww'
-            : from.toString();
+        const fizzBuzzedNumber = fromInclusive % 3 == 0 ? 'Fizz'
+            : fromInclusive % 5 == 0 ? 'Buzz'
+            : fromInclusive % 8 == 0 ? 'Razz'
+            : fromInclusive.toString().indexOf('3') != -1 ? 'Fuww'
+            : fromInclusive.toString().indexOf('5') != -1 ? 'Baww'
+            : fromInclusive.toString().indexOf('8') != -1 ? 'Riww'
+            : fromInclusive.toString();
 
         result.push(fizzBuzzedNumber);
 
-        const nextFizzedNumbers = fizzBuzzExtended(from + 1, to);
+        const nextFizzedNumbers = fizzBuzzExtended(fromInclusive + 1, toInclusive);
         nextFizzedNumbers.forEach(fizz => result.push(fizz));
 
         return result;
     } else {
-        const str = from % 3 == 0 ? 'Fizz'
-            : from % 5 == 0 ? 'Buzz'
-            : from % 8 == 0 ? 'Razz'
-            : from.toString().indexOf('8') != -1 ? 'Riww'
-            : from.toString().indexOf('5') != -1 ? 'Baww'
-            : from.toString().indexOf('3') != -1 ? 'Fuww'
-            : from.toString();
+        const str = fromInclusive % 3 == 0 ? 'Fizz'
+            : fromInclusive % 5 == 0 ? 'Buzz'
+            : fromInclusive % 8 == 0 ? 'Razz'
+            : fromInclusive.toString().indexOf('8') != -1 ? 'Riww'
+            : fromInclusive.toString().indexOf('5') != -1 ? 'Baww'
+            : fromInclusive.toString().indexOf('3') != -1 ? 'Fuww'
+            : fromInclusive.toString();
         const result: string[] = [];
         result.push(str);
 

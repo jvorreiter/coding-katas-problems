@@ -1,3 +1,24 @@
+/* 
+ * Task:
+ * The code below is supposed to take tokens of a mathematical term 
+ * in so called "infix notation" and transform it to "reverse polish notation",
+ * a notation that a lot of calculators use.
+ * This is done using the "Shunting-Yard Algorithm".
+ * Valid tokens are:
+ * - a non-negative number (integer or decimal)
+ * - a binary operator of 
+ *      - `+` (addition)
+ *      - `-` (subtraction)
+ *      - `*` (multiplication) 
+ *      - `/` (division)
+ *      - `^` (exponentiation)
+ * - a parenthesis of `()`, `[]`, `{}`, or `<>`
+ * 
+ * However, the code is buggy or incomplete. 
+ * Find the bugs/missing implementation using tests,
+ * then fix (and optionally refactor) the implementation with the help of the tests you wrote.
+ */
+
 import type { Token } from "./types/Token";
 
 /**
