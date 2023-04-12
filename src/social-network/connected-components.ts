@@ -1,13 +1,28 @@
-/*
-TODO: Description of the problem (use "social network size" here)
-
-*/
+/* 
+ * Context:
+ * A graph is a set of nodes that are connected with each other.
+ * Here, the graph represents a social network, where 
+ * - a node represents a user of the social network, and
+ * - a connection between two nodes represents a friendship between two users
+ *    - connections are not directed, so a node A ist connected to B and vice versa
+ * 
+ * Also, a "connected component" is the (sub)set of nodes, which are connected 
+ * directly or indirectly (called "transitive connection", e.g. "a friend of a friend of a friend"). 
+ * 
+ * Task:
+ * The function below is supposed to take a graph and output the number of connected components 
+ * and the number of nodes per connected component.
+ * However, the employee writing that function just left the company and just said "it works, i tested it".
+ * Find and fix all bugs in that function using test-driven development.
+ */
 
 import type { Graph, Node } from "../_shared/graph";
 
 export type ConnectedComponentsInfo = {
+    /** number of connected components */
     components: number;
-    nodes: number;
+    /** numbers of nodes per connected component */
+    nodes: number[];
 };
 
 export function getConnectedComponents(graph: Graph): ConnectedComponentsInfo {
@@ -28,6 +43,6 @@ export function getConnectedComponents(graph: Graph): ConnectedComponentsInfo {
 
     return {
         components: 1,
-        nodes: numberOfVisitedNodes,
+        nodes: [numberOfVisitedNodes],
     };
 }

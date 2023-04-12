@@ -1,18 +1,23 @@
 /*
- * TODO: describe assignment, refactoring and find bugs
+ * Task: 
+ * Below is buggy and incomplete code that needs to be fixed and refactored.
+ * Also, there are no tests for the implementation at the moment, so focus on these first
+ * to identify bugs/missing implementation, then fix, refactor, and complete the implementation 
+ * using test-driven development.
  * 
- * divisable by 3: Fizz
- * divisable by 5: Buzz
- * divisable by 8: Razz
- * has digit 3: Fuww
- * has digit 5: Baww
- * has digit 8: Riww
+ * The function should return a list of "fizz-buzzed" numbers in a specified range (inclusive).
+ * The rules for the fizz-buzzed number are:
+ * - if the number is divisable by 3, then output "Fizz"
+ * - if the number is divisable by 5, then output "Buzz"
+ * - if the number is divisable by 8, then output "Razz"
+ * - if the number contains the digit 3, then output "Fuww"
+ * - if the number contains the digit 5, then output "Baww"
+ * - if the number contains the digit 8, then output "Riww"
+ * - otherwise: output the number as is
+ * If multiple rules apply, then all should be applied, 
+ * and the output strings for the number should be ordered alphabetically.
  * 
- * otherwise: output the number as is
- * 
- * if multiple apply, then these should be ordered alphabetically (e.g. 35 becomes 'BawwBuzzFaww')
- * 
- * Bonus points: make these numbers configurable
+ * Bonus task: Make the numbers and strings for the rules above configurable.
  */
 
 export function fizzBuzzExtended(from: number, to: number): string[] {
