@@ -3,7 +3,7 @@
  * The code below is supposed to take tokens of a mathematical term 
  * in so called "infix notation" and transform it to "reverse polish notation",
  * a notation that a lot of calculators use.
- * This is done using the "Shunting-Yard Algorithm".
+ * This is done using the relatively simple "Shunting-Yard Algorithm" (see https://de.wikipedia.org/wiki/Shunting-yard-Algorithmus#Im_Detail)
  * Valid tokens are:
  * - a non-negative number (integer or decimal)
  * - a binary operator of 
